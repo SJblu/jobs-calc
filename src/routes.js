@@ -2,9 +2,10 @@ const express = require("express");
 const router = express.Router();
 const ProfileController = require("./controllers/ProfileController");
 const JobController = require("./controllers/JobController");
+const DashboardController = require("./controllers/DashboardController");
 
 // rota index
-router.get("/", JobController.index);
+router.get("/", DashboardController.index);
 
 router.get("/job", JobController.create);
 router.post("/job", JobController.save);
